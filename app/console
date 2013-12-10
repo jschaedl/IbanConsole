@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+
+<?php
+// app/console
+// app/console iban:{validate|generate} [input-file] [output-file]
+
+require 'vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Iban\Console\Command\IbanValidationCommand;
+use Iban\Console\Command\IbanGenerationCommand;
+
+$application = new Application();
+$application->add(new IbanValidationCommand());
+$application->add(new IbanGenerationCommand());
+$application->run();

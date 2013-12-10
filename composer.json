@@ -1,0 +1,30 @@
+{
+    "name": "jschaedl/ibanconsole",
+    "type": "console application",
+    "description": "validate and generate IBANs",
+    "keywords": ["iban", "validation", "generation"],
+    "homepage": "http://github.com/jschaedl/IbanConsole",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jan Schädlich",
+            "email": "mail@janschaedlich.com",
+            "homepage": "https://github.com/jschaedl/"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*", 
+        "phpunit/php-code-coverage": ">=1.2.10,<1.3.0",
+        "phploc/phploc": "*",
+        "sebastian/phpcpd": "*"
+    },
+    "require": {
+        "symfony/console": "2.3.*"
+    },
+    "bin": [
+        "composer/bin/iban"
+    ],
+    "autoload": {
+        "psr-0": { "Iban": "src" }
+    }
+}
